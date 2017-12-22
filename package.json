@@ -1,6 +1,6 @@
 {
   "name": "starwars-characters",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "Get random starwars character names",
   "main": "src/index.js",
   "dependencies": {
@@ -8,15 +8,18 @@
   },
   "devDependencies": {
     "chai": "4.1.2",
+    "cz-conventional-changelog": "2.1.0",
     "mocha": "4.0.1",
-    "semantic-release": "11.0.2"
+    "semantic-release": "^11.0.2"
   },
   "scripts": {
-    "test": "mocha src/index.test.js"
+    "commit": "git cz",
+    "test": "mocha src/index.test.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KeilCarpenter/starwars-microlibrary.git"
+    "url": "https://github.com/KeilCarpenter/starwars-microlibrary.git"
   },
   "keywords": [
     "starwars",
@@ -28,5 +31,10 @@
   "bugs": {
     "url": "https://github.com/KeilCarpenter/starwars-microlibrary/issues"
   },
-  "homepage": "https://github.com/KeilCarpenter/starwars-microlibrary#readme"
+  "homepage": "https://github.com/KeilCarpenter/starwars-microlibrary#readme",
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
 }

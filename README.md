@@ -5,7 +5,7 @@ Library for getting random names of starwars characters
 ## Installing
 ```javascript
 npm install --save starwars-character-names
-...
+```
 
 ## Usage
 ```javascript
@@ -20,4 +20,4 @@ var randomName = names.random();
 
 // returns n number of names
 var fourNames = names.random(4);
-...
+```

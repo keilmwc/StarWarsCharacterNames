@@ -14,11 +14,11 @@ describe('starwars-character-names', () => {
     });
     describe('random', () => {
         it('should return a random string from starwars array', () => {
-            const randomItem = starWars.random();
+            var randomItem = starWars.random();
             expect(starWars.all).to.include(randomItem);
         });
         it("should return an array of random items if passed a number", () => {
-            const randomItems = starWars.random(3);
+            var randomItems = starWars.random(3);
             expect(randomItems).to.have.length(3);
 
             randomItems.forEach((item) => {

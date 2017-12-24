@@ -10,14 +10,17 @@ npm install --save starwars-character-names
 ## Usage
 ```javascript
 // require module
-var starwarsNames = require('starwars-character-names');
+var starWarsNames = require('starwars-character-names');
 
-// return all names
-var allNames = names.all;
+// returns an array of all names
+var allNames = starWarsNames.all;
 
 // returns single random name
-var randomName = names.random();
+var randomName = starWarsNames.random();
 
-// returns n number of names
-var fourNames = names.random(4);
+// returns an array of n number of names
+var fourNames = starWarsNames.random(number);
+
+// returns array of names beginning with user defined char
+var namesByChar = starWarsNames.byChar(char);
 ```

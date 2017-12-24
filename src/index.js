@@ -4,7 +4,8 @@ const getRandomItem = uniqueRandomArray(starWarsNames);
 
 module.exports = {
   all: starWarsNames,
-  random: random
+  random: random,
+    byChar: getNameByFirstChar
 };
 
 function random(number){
@@ -16,5 +17,19 @@ function random(number){
             randomItems.push(getRandomItem());
         }
         return randomItems;
+    }
+}
+
+function getNameByFirstChar(char){
+    var names = [];
+    for(name in starWarsNames){
+        if(char === starWarsNames[name].charAt(0)){
+            names.push(starWarsNames[name]);
+        }
+    }
+    if(names.length > 0){
+        return names;
+    }else{
+        return 'No names beginning with ' + char;
     }
 }

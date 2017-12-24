@@ -26,4 +26,15 @@ describe('starwars-character-names', () => {
             })
         })
     });
+    describe('byChar', () => {
+        it('should return the first name beginning with specified char', () => {
+            var char = "A";
+            expect(starWars.byChar(char)).to.satisfy(namesDoBeginWithChar);
+            function namesDoBeginWithChar(array){
+                return array.every((item) => {
+                    return (item.charAt(0)) === char;
+                });
+            }
+        });
+    });
 });

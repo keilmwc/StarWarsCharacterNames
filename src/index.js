@@ -22,14 +22,33 @@ function random(number){
 
 function getNameByFirstChar(char){
     var names = [];
-    for(name in starWarsNames){
-        if(char === starWarsNames[name].charAt(0)){
-            names.push(starWarsNames[name]);
+
+    switch(true){
+        case ((typeof char === 'string') && (char.length === 1)):
+        {
+            char = char.toUpperCase();
+            for(name in starWarsNames){
+                if(char === starWarsNames[name].charAt(0)){
+                    names.push(starWarsNames[name]);
+                }
+            }
+            switch (true){
+                case ((names.length > 0)):
+                {
+                    return names;
+                }
+                default:{
+                    return 'No names beginning with ' + char;
+                }
+            }
         }
-    }
-    if(names.length > 0){
-        return names;
-    }else{
-        return 'No names beginning with ' + char;
+        case ((typeof char !== 'string')):
+        {
+            return "Expecting a string but got a " + typeof char;
+        }
+        case ((char.length !== 1)):
+        {
+            return "Char must be of length one, got " + char.length;
+        }
     }
 }

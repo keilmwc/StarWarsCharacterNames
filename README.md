@@ -1,6 +1,6 @@
-# starwars-characters
+# starwars-character-names
 
-Library for getting random names of starwars characters
+Library for getting starwars character names
 
 ## Installing
 ```javascript

@@ -1,6 +1,11 @@
 # starwars-character-names
 
-Library for getting starwars character names
+[![Build Status](https://travis-ci.org/KeilCarpenter/starwars-microlibrary.svg?branch=1.1.0)](https://travis-ci.org/KeilCarpenter/starwars-microlibrary)
+[![npm monthly downloads](https://img.shields.io/npm/dm/starwars-character-names.svg?style=flat-square)](https://www.npmjs.com/package/starwars-character-names)
+[![current version](https://img.shields.io/npm/v/starwars-character-names.svg?style=flat-square)](https://www.npmjs.com/package/starwars-character-names)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
+
+Library for getting starwars character names by different search criteria
 
 ## Installing
 ```javascript
@@ -21,6 +26,9 @@ var randomName = starWarsNames.random();
 // returns an array of n number of names
 var fourNames = starWarsNames.random(number);
 
-// returns array of names beginning with user defined char
-var namesByChar = starWarsNames.byChar(char);
+// returns array of names with the first name beginning with user defined char
+var firstNamesByChar = starWarsNames.byFirstCharOfFirstName(char);
+
+// returns array of names with the second name beginning with user defined char
+var secondNamesByChar = starWarsNames.byFirstCharOfSecondName(char);
 ```

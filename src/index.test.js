@@ -26,13 +26,25 @@ describe('starwars-character-names', () => {
             })
         })
     });
-    describe('byChar', () => {
-        it('should return array of name beginning with specified char', () => {
+    describe('byFirstCharOfFirstName', () => {
+        it('should return array of names whos first name begins with specified char', () => {
             var char = 'a';
-            expect(starWars.byChar(char)).to.satisfy(namesDoBeginWithChar);
-            function namesDoBeginWithChar(array){
+            expect(starWars.byFirstCharOfFirstName(char)).to.satisfy(firstNamesDoBeginWithChar);
+            function firstNamesDoBeginWithChar(array){
                 return array.every((item) => {
                     return (item.charAt(0)) === char.toUpperCase() || char.toLowerCase();
+                });
+            }
+        });
+    });
+    describe('bySecondCharOfSecondName', () => {
+        it('should return array of names whos last name begins with specified char', () => {
+            var char = 'a';
+            expect(starWars.byFirstCharOfSecondName(char)).to.satisfy(lastNamesDoBeginWithChar);
+            function lastNamesDoBeginWithChar(array){
+                return array.every((item) => {
+                    var name = item.split(" ");
+                    return (name[name.length - 1].charAt(0)) === char.toUpperCase() || char.toLowerCase();
                 });
             }
         });

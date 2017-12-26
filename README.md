@@ -1,6 +1,6 @@
 # starwars-character-names
 
-[![Build Status](https://travis-ci.org/KeilCarpenter/starwars-microlibrary.svg?branch=1.1.0)](https://travis-ci.org/KeilCarpenter/starwars-microlibrary)
+[![Build Status](https://travis-ci.org/KeilCarpenter/starwars-microlibrary.svg?branch=1.1.0)](https://travis-ci.org/KeilCarpenter/starwars-character-names)
 [![npm monthly downloads](https://img.shields.io/npm/dm/starwars-character-names.svg?style=flat-square)](https://www.npmjs.com/package/starwars-character-names)
 [![current version](https://img.shields.io/npm/v/starwars-character-names.svg?style=flat-square)](https://www.npmjs.com/package/starwars-character-names)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)

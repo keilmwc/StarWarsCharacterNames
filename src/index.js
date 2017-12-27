@@ -3,10 +3,13 @@ const uniqueRandomArray = require('unique-random-array');
 const getRandomItem = uniqueRandomArray(starWarsNames);
 
 module.exports = {
-    all: starWarsNames,
-    random: random,
-    byFirstCharOfFirstName: byFirstCharOfFirstName,
-    byFirstCharOfSecondName: byFirstCharOfSecondName
+    filter: {
+        all: starWarsNames,
+        random: random,
+        byFirstCharOfFirstName: byFirstCharOfFirstName,
+        byFirstCharOfSecondName: byFirstCharOfSecondName
+    }
+
 };
 
 function random(number){
